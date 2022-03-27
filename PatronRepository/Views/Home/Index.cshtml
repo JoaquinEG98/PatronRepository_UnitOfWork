@@ -1,0 +1,15 @@
+﻿@using Models.Data
+@model IEnumerable<Persona>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="row">
+    <div class="col-12">
+        @foreach(var item in Model)
+        {
+            <p>Nombre: @item.Nombre</p>
+            <p>Edad: @item.Edad</p>
+        }
+    </div>
+</div>
