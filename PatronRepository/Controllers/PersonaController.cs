@@ -30,8 +30,7 @@ namespace PatronRepository_UnitOfWork.Controllers
         [HttpGet]
         public IActionResult Add()
         {
-            IEnumerable<Nacionalidad> nacionalidades = _unitOfWork.Nacionalidades.GetAll();
-            ViewBag.Nacionalidades = new SelectList(nacionalidades, "NacionalidadId", "Descripcion");  
+            GetComboNacionalidad();
 
             return View();
         }
@@ -41,8 +40,7 @@ namespace PatronRepository_UnitOfWork.Controllers
         {
             if (!ModelState.IsValid)
             {
-                IEnumerable<Nacionalidad> nacionalidades = _unitOfWork.Nacionalidades.GetAll();
-                ViewBag.Nacionalidades = new SelectList(nacionalidades, "NacionalidadId", "Descripcion");
+                GetComboNacionalidad();
 
                 return View("Add", personaViewModel);
             }
@@ -73,6 +71,12 @@ namespace PatronRepository_UnitOfWork.Controllers
             _unitOfWork.Save();
 
             return RedirectToAction("Index");
+        }
+
+        private void GetComboNacionalidad()
+        {
+            IEnumerable<Nacionalidad> nacionalidades = _unitOfWork.Nacionalidades.GetAll();
+            ViewBag.Nacionalidades = new SelectList(nacionalidades, "NacionalidadId", "Descripcion");
         }
     }
 }
