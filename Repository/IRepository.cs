@@ -10,7 +10,7 @@ namespace Repository
     {
         IEnumerable<TEntity> GetAll();
         TEntity Get(int id);
-        void Add(TEntity data);
+        TEntity Add(TEntity data);
         void Update (TEntity data);
         void Delete(int id);
         void Save();

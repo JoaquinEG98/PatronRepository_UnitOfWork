@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32319.34
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PatronRepository", "PatronRepository\PatronRepository.csproj", "{1A7F6C91-51EE-4772-AEB5-FA7CA4E75904}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PatronRepository_UnitOfWork", "PatronRepository\PatronRepository_UnitOfWork.csproj", "{1A7F6C91-51EE-4772-AEB5-FA7CA4E75904}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{91A7B94D-2055-4C11-A916-08F36E85337E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models", "Models\Models.csproj", "{91A7B94D-2055-4C11-A916-08F36E85337E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Repository\Repository.csproj", "{AB710BBE-C95A-419E-B16C-F5941974CD7E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tools", "Repository\Tools.csproj", "{AB710BBE-C95A-419E-B16C-F5941974CD7E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,0 +1,28 @@
+﻿@using PatronRepository_UnitOfWork.Models.ViewModels
+@model IEnumerable<PersonaViewModel>
+
+
+
+<div class="row">
+    <div class="col-12">
+        <a class="btn btn-primary" href="~/Persona/Add">Nueva persona</a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <table class="table">
+            <tr>
+                <th>Nombre</th>
+                <th>Edad</th>
+            </tr>
+            @foreach (PersonaViewModel item in Model)
+            {
+                <tr>
+                    <td>@item.Nombre</td>
+                    <td>@item.Edad</td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>

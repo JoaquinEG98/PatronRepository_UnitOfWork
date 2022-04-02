@@ -1,0 +1,31 @@
+﻿@using PatronRepository_UnitOfWork.Models.ViewModels
+@model FormPersonaViewModel
+
+<form asp-controller="Persona" asp-action="Add" method="post">
+
+    <div class="form-group">
+        <label asp-for="Nombre"></label>
+        <input class="form-control" asp-for="Nombre" />
+        <span asp-validation-for="Nombre" class="text-danger"></span>
+
+        <label asp-for="Edad"></label>
+        <input class="form-control" asp-for="Edad" />
+        <span asp-validation-for="Edad" class="text-danger"></span>
+
+        <div class="form-group">
+            <label asp-for="NacionalidadId"></label>
+            <select class="form-control" asp-for="NacionalidadId" asp-items="@ViewBag.Nacionalidades">
+                <option value="">Seleccionar nacionalidad</option>
+            </select>
+            <span asp-validation-for="NacionalidadId" class="text-danger"></span>
+        </div>
+
+        <label asp-for="OtraNacionalidad"></label>
+        <input class="form-control" asp-for="OtraNacionalidad" />
+        <span asp-validation-for="OtraNacionalidad" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <button class="btn btn-primary" type="submit">Guardar</button>
+    </div>
+</form>

@@ -8,7 +8,7 @@ namespace Models.Data
         public int PersonaId { get; set; }
         public string Nombre { get; set; } = null!;
         public int Edad { get; set; }
-        public int NacionalidadId { get; set; }
+        public int? NacionalidadId { get; set; }
 
         public virtual Nacionalidad Nacionalidad { get; set; } = null!;
     }

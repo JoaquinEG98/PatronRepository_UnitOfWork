@@ -19,9 +19,10 @@ namespace Repository
             _dbSet = context.Set<TEntity>();
         }
 
-        public void Add(TEntity data)
+        public TEntity Add(TEntity data)
         {
             _dbSet.Add(data);
+            return data;
         }
 
         public void Delete(int id)

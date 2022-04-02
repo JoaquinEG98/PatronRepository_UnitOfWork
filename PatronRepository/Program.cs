@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Models.Data;
 using Repository;
+using Tools;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,8 +14,9 @@ builder.Services.AddDbContext<PatronesContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("Connection"));
 });
 
-// Inyecto mi Repository
+// Inyecto mi Repository y Unit of Work
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 var app = builder.Build();
 
